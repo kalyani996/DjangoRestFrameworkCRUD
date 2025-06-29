@@ -2,7 +2,7 @@
 A simple yet powerful RESTful API built with Django and Django REST Framework, supporting product and user management with full CRUD operations, authentication, pagination, and permission control.
 
 🚀 Features
-✅ CRUD for Products and Users
+✅ CRUD for Products
 🔐 User authentication using Django’s built-in auth system
 🛂 Permission handling for protected routes (e.g., only owners can update/delete their data)
 🔢 Pagination for scalable API responses
