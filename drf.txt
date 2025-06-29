@@ -1,0 +1,2 @@
+To get random product
+ Product.objects.all().order_by("?").first() 
