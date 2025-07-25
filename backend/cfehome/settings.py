@@ -51,6 +51,8 @@ INSTALLED_APPS = [
     'products',
     'search',
     'snippets',
+    'countdowns',
+    'expenses',
 ]
 
 MIDDLEWARE = [

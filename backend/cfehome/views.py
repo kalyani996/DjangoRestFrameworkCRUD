@@ -30,6 +30,32 @@ def api_home(request,*args,**kwargs):
         except Exception as e:
             print(f"Error reversing 'products:product-list': {e}")
             endpoints['products_list_create'] = "/api/products/" # Fallback if reverse fails
+        try:
+        # Reversing 'category-list' for the CategoryViewSet list endpoint
+            category_list_path = reverse('category-list')
+            endpoints['expenses_categories_list_create'] = request.build_absolute_uri(category_list_path)
+        except Exception as e:
+            print(f"Error reversing 'category-list': {e}")
+            endpoints['expenses_categories_list_create'] = "/api/expenses/categories/" # Fallback
+
+        try:
+            # Reversing 'transaction-list' for the TransactionViewSet list endpoint
+            transaction_list_path = reverse('transaction-list')
+            endpoints['expenses_transactions_list_create'] = request.build_absolute_uri(transaction_list_path)
+        except Exception as e:
+            print(f"Error reversing 'transaction-list': {e}")
+            endpoints['expenses_transactions_list_create'] = "/api/expenses/transactions/" # Fallback
+
+        try:
+            # Reversing 'monthly-expense-summary' for the custom APIView
+            summary_path = reverse('monthly_expenses_summary')
+            endpoints['expenses_monthly_summary'] = request.build_absolute_uri(summary_path)
+        except Exception as e:
+            print(f"Error reversing 'monthly-expense-summary': {e}")
+            endpoints['expenses_monthly_summary'] = "/api/expenses/summary/" # Fallback
+
+        endpoints['expenses_base_url'] = request.build_absolute_uri("/api/expenses/")
+
 
         try:
             endpoints['admin_panel'] = request.build_absolute_uri(reverse('admin:index'))

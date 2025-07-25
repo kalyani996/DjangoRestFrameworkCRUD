@@ -126,7 +126,7 @@ def product_alt_view(request, pk=None,*args, **kwargs):
         data = ProductSerializer(queryset, many=True).data
         return Response(data)
      
-     if method == "POeNumberPagST":
+     if method == "POST":
         serializer = ProductSerializer(data=request.data)
         if serializer.is_valid(raise_exception=True):
             title = serializer.validated_data.get('title')
