@@ -9,12 +9,14 @@ A simple yet powerful RESTful API built with Django and Django REST Framework, s
 🧪 Data validation with Django REST Framework’s Serializers
 🗂 Admin panel access for managing data easily
 💾 SQLite as the development database (easily swappable with PostgreSQL/MySQL)
+
 🧱 Technologies Used
-Django
-Django REST Framework
-SQLite
-Python
-Postman (for testing API endpoints)
+  Django
+  Django REST Framework
+  SQLite
+  Python
+  Postman (for testing API endpoints)
+  
 🧪 Installation & Local Setup
 git clone https://github.com/kalyani996/DjangoRestFrameworkCRUD.git
 cd projectname
@@ -34,10 +36,10 @@ python manage.py runserver
 
 🔐 Authentication & Access Control
 - User Creation:
-There is no public registration or login endpoint.
-All users are created directly via the Django Admin panel (/admin).
+  There is no public registration or login endpoint.
+  All users are created directly via the Django Admin panel (/admin).
 - Authentication Flow:
-API access requires users to be authenticated through Django’s admin login session. Once logged in through the admin panel, users can interact with API endpoints using the Django REST Framework's built-in session authentication (via the browsable API interface).
+  API access requires users to be authenticated through Django’s admin login session. Once logged in through the admin panel, users can interact with API endpoints using the   Django REST Framework's built-in session authentication (via the browsable API interface).
 - Permissions:
 - Only authenticated users (those logged into the Django admin) can view or modify resources.
 - The API is protected using DRF’s IsAuthenticated permission class.
@@ -45,5 +47,9 @@ API access requires users to be authenticated through Django’s admin login ses
 
 ⚠️ Developer Note
 To test the API locally, log in through the Django Admin panel (/admin) using a superuser account. All API routes will remain read-protected unless you are authenticated through the session-based admin login.
+
+Additional Module
+- countdown
+- expense tracker
 
 
